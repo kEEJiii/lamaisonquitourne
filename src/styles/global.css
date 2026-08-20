@@ -56,7 +56,7 @@ a{color:inherit}
 
 .section-titre{font-family:var(--font-titre);font-size:.8rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--ardoise);margin-bottom:1.1rem}
 
-.liste{list-style:none;padding:0;display:grid;gap:1rem}
+.liste{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .carte{background:var(--blanc);border:1px solid var(--brume);border-radius:14px;padding:1.25rem 1.35rem;transition:border-color .15s}
 .carte:hover{border-color:var(--ardoise)}
 .carte a{text-decoration:none}
@@ -103,4 +103,5 @@ a{color:inherit}
 @media (max-width:640px){
   .nav{gap:.85rem;font-size:.85rem}
   .brand span{display:none}
+  .liste{grid-template-columns:1fr}
 }

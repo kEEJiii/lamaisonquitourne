@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Se lancer dans Home Assistant : le matériel que j'achèterais aujourd'hui"
 description: "J'ai commencé par acheter un Raspberry Pi sans savoir ce que j'allais en faire. Deux ans plus tard, voici la liste que j'aurais aimé lire avant de dépenser le premier euro."
 pubDate: 2026-08-20

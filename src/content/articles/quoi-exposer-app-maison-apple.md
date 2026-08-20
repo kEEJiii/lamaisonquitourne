@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Ce que j'expose dans l'app Maison, et ce que je garde dans Home Assistant"
 description: "Home Assistant peut tout envoyer vers l'app Maison d'Apple. C'est précisément le problème. Voici le tri que j'ai fini par faire, et la règle qui le guide."
 pubDate: 2026-08-20

@@ -111,10 +111,18 @@ C'est le sujet qui m'a demandé le plus de recherches, et celui où j'ai trouvé
 
 ---
 
+## Où j'achète
+
+**[Domadoo](https://www.domadoo.fr/fr/?domid=148)** est un revendeur français spécialisé en domotique, basé près de Lyon. C'est là que je commande l'essentiel de mon matériel Zigbee : gamme Sonoff, Aqara, accessoires compatibles Home Assistant.
+
+Deux raisons à ce choix : un catalogue qui colle vraiment à l'écosystème Home Assistant plutôt qu'un rayon généraliste, et des opérations promotionnelles régulières sur les marques que j'utilise — plusieurs fois par an à -15 ou -20 % sur la gamme Sonoff, comme mentionné plus haut.
+
+Le lien ci-dessus est un lien d'affiliation : si tu commandes en passant par lui, je touche une petite commission, sans que ça change ton prix. Ça ne change rien à mes avis non plus — je continue de n'écrire ici que sur ce que j'utilise réellement.
+
 ## Transparence
 
-Aucun lien de cette page n'est affilié. Aucun produit ne m'a été offert ni prêté.
+Le seul lien affilié de cette page est celui vers Domadoo ci-dessus. Aucun produit listé ici ne m'a été offert ni prêté.
 
-Tout le matériel listé ici a été acheté de ma poche et est installé chez moi. Si cela change un jour, ce sera écrit noir sur blanc, produit par produit.
+Tout le matériel listé ici a été acheté de ma poche et est installé chez moi. Si d'autres liens affiliés apparaissent un jour, ce sera écrit noir sur blanc, produit par produit.
 
 *Page mise à jour au fil des articles.*

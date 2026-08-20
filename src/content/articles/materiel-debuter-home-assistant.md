@@ -182,7 +182,7 @@ Pour une installation de départ qui fait vraiment quelque chose :
 | 1 télécommande | ~13 € |
 | **Total** | **environ 250 à 300 €** |
 
-Les prix bougent beaucoup. Domadoo organise plusieurs fois par an des opérations à -15 ou -20 % sur toute la gamme Sonoff. Si tu n'es pas pressé, attendre une de ces fenêtres fait facilement 30 € de différence sur un panier de départ.
+Les prix bougent beaucoup. [Domadoo](https://www.domadoo.fr/fr/?domid=148) organise plusieurs fois par an des opérations à -15 ou -20 % sur toute la gamme Sonoff. Si tu n'es pas pressé, attendre une de ces fenêtres fait facilement 30 € de différence sur un panier de départ.
 
 Ajoute 6,50 €/mois si tu prends Nabu Casa.
 
@@ -223,4 +223,4 @@ Chez moi, la réponse s'appelle l'app Maison d'Apple. C'est le sujet de cet arti
 
 ---
 
-*Aucun lien de cet article n'est affilié et aucun produit ne m'a été offert. Tout le matériel cité est installé chez moi et payé de ma poche.*
+*Le lien vers Domadoo ci-dessus est un lien d'affiliation. Aucun produit cité dans cet article ne m'a été offert : tout le matériel a été payé de ma poche et est installé chez moi.*

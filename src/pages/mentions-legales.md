@@ -36,9 +36,13 @@ Les données sont hébergées aux États-Unis par Cloudflare, Inc.
 
 Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Écrivez à contact@lamaisonquitourne.fr.
 
-## Absence de publicité et d'affiliation
+## Publicité et affiliation
 
-Ce site ne comporte aucune publicité, aucun lien affilié et aucune activité commerciale.
+Ce site ne comporte aucune publicité display.
+
+Certains liens vers du matériel sont des liens d'affiliation (actuellement : Domadoo). Si vous achetez via l'un de ces liens, je perçois une commission, sans surcoût pour vous. Ces liens sont signalés comme tels à chaque fois qu'ils apparaissent.
+
+Cette activité reste occasionnelle et ne change pas le statut d'éditeur non professionnel indiqué plus haut.
 
 ## Propriété intellectuelle
 

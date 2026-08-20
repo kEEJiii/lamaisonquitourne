@@ -52,4 +52,4 @@ Les contenus publiés décrivent une installation domotique personnelle. Ils son
 
 Toute intervention sur une installation électrique doit être réalisée par une personne qualifiée.
 
-*Dernière mise à jour : [DATE]*
+*Dernière mise à jour : 20 août 2026*

@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Mon alarme se déclenchait la nuit sans raison : filtrer les faux positifs d'un capteur de vibration"
 description: "Sirènes à trois heures du matin, sans intrusion. Baisser la sensibilité n'a rien changé. Voici le filtre qui a réglé le problème, et pourquoi il fonctionne."
 pubDate: 2026-08-20

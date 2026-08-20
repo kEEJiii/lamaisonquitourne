@@ -1,0 +1,28 @@
+---
+import Base from './Base.astro';
+import Chip from '../components/Chip.astro';
+
+const { article } = Astro.props;
+const d = article.data;
+const dateFr = (v: Date) => v.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
+const slugCat = d.category.toLowerCase()
+  .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+  .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+---
+<Base title={d.title} description={d.description}>
+  <article>
+    <div class="wrap article-header">
+      <a class="cat" href={`/categories/${slugCat}/`}>{d.category}</a>
+      <h1>{d.title}</h1>
+      <p class="chapo">{d.description}</p>
+      <div class="infos">
+        <Chip etat={d.etat} label={d.etatLabel} />
+        <time datetime={d.pubDate.toISOString()}>{dateFr(d.pubDate)}</time>
+        {d.updatedDate && <span>Mis à jour le {dateFr(d.updatedDate)}</span>}
+      </div>
+    </div>
+    <div class="wrap prose">
+      <slot />
+    </div>
+  </article>
+</Base>

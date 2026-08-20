@@ -1,0 +1,15 @@
+---
+const { article } = Astro.props;
+const d = article.data;
+const dateFr = d.pubDate.toLocaleDateString('fr-FR', { year: 'numeric', month: 'short', day: 'numeric' });
+---
+<li class="carte">
+  <a href={`/articles/${article.id}/`}>
+    <div class="meta">
+      <span class="cat">{d.category}</span>
+      <time datetime={d.pubDate.toISOString()}>{dateFr}</time>
+    </div>
+    <h3>{d.title}</h3>
+    <p>{d.description}</p>
+  </a>
+</li>

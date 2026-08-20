@@ -1,0 +1,22 @@
+---
+import Logo from './Logo.astro';
+const path = Astro.url.pathname;
+const liens = [
+  { href: '/articles/', texte: 'Articles' },
+  { href: '/prestations/', texte: 'Prestations' },
+  { href: '/a-propos/', texte: 'À propos' },
+];
+---
+<header class="site-header">
+  <div class="wrap-large bar">
+    <a href="/" class="brand">
+      <Logo size={30} />
+      <span>La Maison<br />qui Tourne</span>
+    </a>
+    <nav class="nav">
+      {liens.map(l => (
+        <a href={l.href} aria-current={path.startsWith(l.href) ? 'page' : undefined}>{l.texte}</a>
+      ))}
+    </nav>
+  </div>
+</header>

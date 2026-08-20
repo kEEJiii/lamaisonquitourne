@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Carte from '../components/Carte.astro';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const recents = articles.slice(0, 8);
+---
+<Base
+  title="La Maison qui Tourne"
+  description="Home Assistant dans une vraie maison, avec deux enfants et un chat. Tutoriels, retours d'expérience et solutions testées en conditions réelles.">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Home Assistant dans une vraie maison</h1>
+      <p>
+        Pas un labo. Une maison habitée, avec une famille qui utilise l'app Maison de l'iPhone
+        et ne veut pas savoir ce qu'il y a derrière. Ce qui tourne, ce qui casse, et pourquoi.
+      </p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-block:2.5rem">
+    <h2 class="section-titre">Derniers articles</h2>
+    {recents.length === 0 ? (
+      <p style="color:var(--ardoise)">Les premiers articles arrivent bientôt.</p>
+    ) : (
+      <ul class="liste">
+        {recents.map(a => <Carte article={a} />)}
+      </ul>
+    )}
+  </section>
+</Base>

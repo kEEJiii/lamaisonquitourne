@@ -1,0 +1,11 @@
+---
+interface Props { etat?: string; label?: string; }
+const { etat = 'tourne', label } = Astro.props;
+const defauts: Record<string, string> = {
+  tourne: 'Tourne chez moi',
+  bricole: 'Fonctionne, mais bricolé',
+  abandonne: 'Abandonné',
+};
+const texte = label ?? defauts[etat] ?? defauts.tourne;
+---
+<span class="chip"><span class={`dot ${etat}`}></span>{texte}</span>

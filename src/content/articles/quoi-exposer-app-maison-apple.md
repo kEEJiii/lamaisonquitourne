@@ -145,4 +145,4 @@ Et une méthode encore plus simple, que je recommande : **fais ouvrir l'app Mais
 
 Le tri fait, l'app Maison devient utilisable. Reste la question de la fiabilité : que se passe-t-il quand un capteur se déclenche sans raison ?
 
-Chez moi, la réponse s'appelait le chat. C'est le sujet du prochain article.
+Chez moi, la réponse venait d'un capteur de vibration qui déclenchait l'alarme la nuit sans raison. C'est le sujet du [prochain article](/articles/faux-positifs-capteur-vibration-alarme/).

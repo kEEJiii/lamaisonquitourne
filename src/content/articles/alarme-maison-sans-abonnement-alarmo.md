@@ -209,7 +209,7 @@ Ne branche pas la sirène le premier jour. Tu vas avoir des faux positifs — to
 
 ## Les limites, ce qui casse encore
 
-- **Les faux positifs existent.** J'en ai eu, à cause de mon chat. J'ai fini par les régler, mais ça m'a pris du temps — un article y est consacré.
+- **Les faux positifs existent.** J'en ai eu sur un capteur de vibration, au point que l'alarme partait la nuit sans raison. J'ai fini par les régler avec un système de confirmation — [un article y est consacré](/articles/faux-positifs-capteur-vibration-alarme/).
 - **Aucune batterie de secours.** <!-- À COMPLÉTER : est-ce que j'ai mis un onduleur depuis ? -->
 - **Alarmo est une extension communautaire.** Elle est excellente et bien maintenue, mais elle ne dépend pas de l'équipe Home Assistant.
 

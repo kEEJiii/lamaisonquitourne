@@ -21,8 +21,8 @@ C'est le contexte qui vous dira si mes articles s'appliquent à votre situation.
 | | |
 |---|---|
 | Type | Maison individuelle, construction récente |
-| Surface | XX m² sur deux niveaux |
-| Année | XXXX |
+| Surface | 180 m² sur deux niveaux |
+| Année | 2024 |
 | Région | Beaujolais, au nord de Lyon |
 | Chauffage | Pompe à chaleur air/eau, gestion multi-zones |
 | Volets | Volets roulants motorisés sur toutes les pièces |
@@ -36,13 +36,15 @@ Deux choses en découlent, et elles reviennent souvent dans mes articles.
 
 ## Qui s'en sert
 
-C'est le point que je considère comme le plus déterminant, et le plus souvent négligé.
+Marie a un iPhone. Elle n'ouvre jamais Home Assistant. Elle utilise l'app Maison d'Apple, un interrupteur mural, ou elle demande à voix haute.
 
-Marie a un iPhone. Elle n'ouvre jamais Home Assistant. Les enfants non plus. Ils utilisent l'app Maison d'Apple, un interrupteur mural, ou ils demandent à voix haute.
+Les enfants ont un an et demi et cinq ans et demi. Ils n'ont ni téléphone ni application. L'aîné sait appuyer sur un interrupteur. Le petit ne pilote rien du tout.
+
+C'est une contrainte plus forte qu'il n'y paraît, et c'est elle qui structure toute mon installation : **la maison doit fonctionner pour des gens qui ne peuvent actionner aucune interface.**
 
 Donc chaque automatisation que j'écris doit passer un test : **est-ce que ça marche si je ne suis pas là ?**
 
-Une installation domotique qui dépend de son administrateur n'est pas une installation. C'est un hobby déguisé. J'ai mis un moment à l'admettre 😬
+Une installation domotique qui dépend de son administrateur n'est pas une installation. C'est un hobby déguisé. J'ai mis un moment à l'admettre.
 
 ## Ce qui tourne
 

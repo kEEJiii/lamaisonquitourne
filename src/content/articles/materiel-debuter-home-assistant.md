@@ -15,7 +15,7 @@ J'ai fait les choses à l'envers.
 
 J'ai acheté un Raspberry Pi 5 sans projet précis. Un de ces achats qu'on justifie après coup. C'est en cherchant quoi en faire que j'ai découvert Home Assistant.
 
-Mon idée de départ tenait en une phrase : **piloter la maison depuis l'app Maison de mon iPhone.** Pas depuis une application de domotique. Depuis celle qui est déjà installée, celle que ma femme et mes enfants utilisent sans y penser.
+Mon idée de départ tenait en une phrase : **piloter la maison depuis l'app Maison de mon iPhone.** Pas depuis une application de domotique. Depuis celle qui est déjà installée, celle que ma femme utilise sans y penser.
 
 Le reste s'est ajouté par couches. Une lampe. Puis les volets. Puis la climatisation. Puis, le jour où Marie a voulu une alarme, tout est devenu sérieux d'un coup.
 

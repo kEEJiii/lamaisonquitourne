@@ -13,7 +13,7 @@ tags: ["homekit", "ios", "pont", "apple"]
 
 Chez moi, Home Assistant tourne bien. Le souci, c'est que j'étais le seul à m'en servir.
 
-Marie a un iPhone. Les enfants aussi, bientôt. Aucun d'eux n'a envie d'ouvrir une application de domotique pour allumer une lampe. Ils veulent l'app Maison, celle qui est déjà installée, celle qui est dans le centre de contrôle.
+Marie a un iPhone. Elle n'a aucune envie d'ouvrir une application de domotique pour allumer une lampe. Elle veut l'app Maison, celle qui est déjà installée, celle qui est dans le centre de contrôle.
 
 Et c'est légitime. Si ta femme doit ouvrir Home Assistant pour éteindre le salon, ton installation a échoué. Peu importe la qualité de tes automatisations.
 

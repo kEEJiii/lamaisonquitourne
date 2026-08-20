@@ -1,47 +1,55 @@
 ---
 layout: ../layouts/Page.astro
 title: "Mentions légales"
-description: "Mentions légales, hébergement, données personnelles et affiliation du site La Maison qui Tourne."
+description: "Mentions légales, hébergement et données personnelles du site La Maison qui Tourne."
 ---
 
 # Mentions légales
 
-## Éditeur du site
+## Éditeur
 
-**La Maison qui Tourne**
-Site édité par un particulier.
+Ce site est édité à titre non professionnel par une personne physique.
+
+Conformément à l'article 1-1, II de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, l'éditeur a communiqué ses éléments d'identification personnelle à son hébergeur et conserve l'anonymat vis-à-vis du public.
+
 Contact : contact@lamaisonquitourne.fr
 
-*À compléter : nom, prénom et adresse du responsable de publication. Ces mentions sont obligatoires, y compris pour un site non commercial.*
+## Hébergeur
 
-## Hébergement
+**Cloudflare, Inc.**
+101 Townsend Street
+San Francisco, CA 94107
+États-Unis
+Téléphone : +1 (650) 319-8930
 
-Le site est hébergé par **Cloudflare, Inc.**
-101 Townsend St, San Francisco, CA 94107, États-Unis
-
-Le nom de domaine est enregistré chez **OVH SAS**
-2 rue Kellermann, 59100 Roubaix, France
+Le nom de domaine est enregistré auprès d'**OVH SAS**, 2 rue Kellermann, 59100 Roubaix, France.
 
 ## Données personnelles
 
-Ce site n'utilise **aucun cookie de suivi** et ne collecte aucune donnée nominative.
+Ce site n'utilise aucun cookie de suivi et ne collecte aucune donnée nominative.
 
-La mesure d'audience est assurée par Cloudflare Web Analytics, qui fonctionne sans cookie et sans identifiant individuel. Aucune donnée n'est revendue ni transmise à des tiers.
+La mesure d'audience est assurée par Cloudflare Web Analytics, qui fonctionne sans cookie et sans identifiant individuel.
 
-Si vous m'écrivez par e-mail, votre adresse sert uniquement à vous répondre. Elle n'est ajoutée à aucune liste de diffusion.
+Si vous écrivez par e-mail, votre adresse sert uniquement à répondre. Elle n'est ajoutée à aucune liste de diffusion et n'est transmise à personne.
 
-## Liens affiliés
+Les données sont hébergées aux États-Unis par Cloudflare, Inc.
 
-Certains articles contiennent des liens affiliés. Si vous effectuez un achat après avoir cliqué sur l'un de ces liens, je perçois une commission. **Le prix que vous payez reste identique.**
+Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Écrivez à contact@lamaisonquitourne.fr.
 
-En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.
+## Absence de publicité et d'affiliation
 
-Ces commissions n'influencent pas mes recommandations. Je ne recommande que du matériel que j'utilise ou que j'ai testé, et je le signale explicitement lorsqu'un produit m'a été prêté ou offert.
+Ce site ne comporte aucune publicité, aucun lien affilié et aucune activité commerciale.
 
 ## Propriété intellectuelle
 
-Les textes, images et codes publiés sur ce site sont la propriété de leur auteur. Les extraits de configuration Home Assistant peuvent être réutilisés librement.
+Les textes et images publiés sur ce site sont protégés par le droit d'auteur.
+
+Les extraits de configuration Home Assistant peuvent être réutilisés librement, y compris à des fins commerciales, sans obligation d'attribution.
 
 ## Responsabilité
 
-Les contenus publiés décrivent une installation personnelle. Ils sont fournis à titre informatif, sans garantie. Toute intervention sur une installation électrique doit être réalisée par un professionnel qualifié.
+Les contenus publiés décrivent une installation domotique personnelle. Ils sont fournis à titre informatif, sans garantie de résultat.
+
+Toute intervention sur une installation électrique doit être réalisée par une personne qualifiée.
+
+*Dernière mise à jour : [DATE]*

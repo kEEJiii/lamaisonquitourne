@@ -80,7 +80,7 @@ Alarmo passe par HACS, le magasin d'extensions communautaires de Home Assistant.
 
 Une entrée « Alarmo » apparaît dans le menu latéral. Toute la configuration se fait là, en interface graphique. Aucun YAML.
 
-<!-- CAPTURE 1 : l'écran principal d'Alarmo -->
+![Écran des modes dans Alarmo, avec les cinq modes d'armement disponibles et leur nombre de capteurs actifs](/images/articles/alarme-alarmo/alarmo-modes.png)
 
 ## Les trois décisions qui structurent tout
 
@@ -108,7 +108,7 @@ Trop court, tu déclenches ta propre alarme. Trop long, un intrus a le temps de 
 
 Je ne publie pas mes valeurs — ce serait offrir la moitié du travail à quelqu'un de mal intentionné. Réfléchis simplement au temps qu'il te faut réellement, chronomètre en main.
 
-<!-- CAPTURE 2 : l'écran de configuration des zones -->
+![Écran de configuration des zones dans Alarmo : chaque capteur d'ouverture associé à ses modes d'armement. Les noms de deux chambres d'enfants sont floutés.](/images/articles/alarme-alarmo/alarmo-zones.png)
 
 ## Armer sans téléphone
 
@@ -121,6 +121,8 @@ Chez moi, deux **télécommandes Zigbee** à une dizaine d'euros. Un bouton pour
 Et un retour visuel : **la lumière de l'entrée clignote** pour confirmer l'armement. Sans ça, tu doutes toujours de savoir si c'est bien parti.
 
 Cette histoire de confirmation paraît anecdotique. C'est en réalité ce qui a fait qu'elle utilise l'alarme sans me demander.
+
+![Écran des actions Alarmo : allumer les lampes et activer les sirènes automatiquement selon le mode armé](/images/articles/alarme-alarmo/alarmo-actions.png)
 
 <!-- CAPTURE 3 : la télécommande en place -->
 

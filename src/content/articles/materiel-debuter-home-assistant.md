@@ -17,7 +17,7 @@ J'ai acheté un Raspberry Pi 5 sans projet précis. Un de ces achats qu'on justi
 
 Mon idée de départ tenait en une phrase : **piloter la maison depuis l'app Maison de mon iPhone.** Pas depuis une application de domotique. Depuis celle qui est déjà installée, celle que ma femme utilise sans y penser.
 
-Le reste s'est ajouté par couches. Une lampe. Puis les volets. Puis la climatisation. Puis, le jour où Marie a voulu une alarme, tout est devenu sérieux d'un coup.
+Le reste s'est ajouté par couches. Une lampe. Puis les volets. Puis la climatisation. Puis, le jour où ma femme a voulu une alarme, tout est devenu sérieux d'un coup.
 
 C'était de l'expérimentation. Ça a fini par devenir un système dont ma famille dépend.
 

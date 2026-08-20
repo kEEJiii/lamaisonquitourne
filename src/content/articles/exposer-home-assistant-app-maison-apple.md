@@ -13,7 +13,7 @@ tags: ["homekit", "ios", "pont", "apple"]
 
 Chez moi, Home Assistant tourne bien. Le souci, c'est que j'étais le seul à m'en servir.
 
-Marie a un iPhone. Elle n'a aucune envie d'ouvrir une application de domotique pour allumer une lampe. Elle veut l'app Maison, celle qui est déjà installée, celle qui est dans le centre de contrôle.
+Ma femme a un iPhone. Elle n'a aucune envie d'ouvrir une application de domotique pour allumer une lampe. Elle veut l'app Maison, celle qui est déjà installée, celle qui est dans le centre de contrôle.
 
 Et c'est légitime. Si ta femme doit ouvrir Home Assistant pour éteindre le salon, ton installation a échoué. Peu importe la qualité de tes automatisations.
 
@@ -51,7 +51,7 @@ Pour démarrer, prends **pont**.
 
 Home Assistant te propose de partir de tout et de retirer, ou de partir de rien et d'ajouter.
 
-Choisis **inclure**. C'est plus long au départ, mais tu gardes la main. En mode exclure, chaque nouvelle entité créée dans Home Assistant se retrouve automatiquement chez Apple. Au bout de six mois, l'app Maison de Marie déborde de capteurs de batterie.
+Choisis **inclure**. C'est plus long au départ, mais tu gardes la main. En mode exclure, chaque nouvelle entité créée dans Home Assistant se retrouve automatiquement chez Apple. Au bout de six mois, l'app Maison de ma femme déborde de capteurs de batterie.
 
 ### Les domaines
 
@@ -132,13 +132,13 @@ C'est contre-intuitif, ce n'est écrit nulle part, et ça peut arriver sur n'imp
 
 ## Une astuce de nommage qui surprend
 
-Dans la chambre de mon fils, l'app Maison affiche deux tuiles nommées « Chambre Léon ». Le volet roulant et le capteur de la fenêtre. Rigoureusement le même nom.
+Dans la chambre de mon fils, l'app Maison affiche deux tuiles nommées « Chambre Enfant ». Le volet roulant et le capteur de la fenêtre. Rigoureusement le même nom.
 
 C'est volontaire, et ça ne pose aucun problème.
 
 D'abord parce que la pièce porte déjà son nom : répéter « volet » ou « capteur » dans chaque accessoire alourdit l'affichage sans rien apporter. On gagne en lisibilité.
 
-Ensuite parce que **Siri tranche toute seule, par le verbe.** « Ouvre Chambre Léon » ne peut viser qu'un volet — on n'ouvre pas un capteur d'ouverture. Le contexte de la commande suffit à lever l'ambiguïté.
+Ensuite parce que **Siri tranche toute seule, par le verbe.** « Ouvre Chambre Enfant » ne peut viser qu'un volet — on n'ouvre pas un capteur d'ouverture. Le contexte de la commande suffit à lever l'ambiguïté.
 
 C'est contre-intuitif quand on vient de Home Assistant, où l'identifiant unique est roi. Côté Apple, l'interprétation est plus souple qu'on ne le croit.
 

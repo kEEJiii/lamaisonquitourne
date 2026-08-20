@@ -10,7 +10,7 @@ description: "Qui je suis, à quoi ressemble ma maison, et ce qui tourne dedans.
 
 Je m'appelle Alex. Je travaille dans l'informatique depuis une douzaine d'années, côté conseil et gestion de projets. Ce n'est pas mon métier de faire de la domotique. C'est ce que je fais le soir, une fois les enfants couchés.
 
-Je vis au nord de Lyon, dans le Beaujolais, avec Marie, nos deux enfants et un chat nommé Khalee 🐈
+Je vis au nord de Lyon, dans le Beaujolais, avec ma femme, nos deux enfants et un chat 🐈
 
 Ce blog raconte une installation Home Assistant qui tourne dans une maison habitée. Pas dans un labo. La différence est importante : quand une automatisation rate ici, quelqu'un se réveille, râle, ou reste dans le noir 😅
 
@@ -36,7 +36,7 @@ Deux choses en découlent, et elles reviennent souvent dans mes articles.
 
 ## Qui s'en sert
 
-Marie a un iPhone. Elle n'ouvre jamais Home Assistant. Elle utilise l'app Maison d'Apple, un interrupteur mural, ou elle demande à voix haute.
+Ma femme a un iPhone. Elle n'ouvre jamais Home Assistant. Elle utilise l'app Maison d'Apple, un interrupteur mural, ou elle demande à voix haute.
 
 Les enfants ont un an et demi et cinq ans et demi. Ils n'ont ni téléphone ni application. L'aîné sait appuyer sur un interrupteur. Le petit ne pilote rien du tout.
 

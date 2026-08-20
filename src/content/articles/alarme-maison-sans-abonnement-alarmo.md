@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: "Alarme maison sans abonnement : j'ai remplacé un devis à 5 000 € par Home Assistant"
 description: "Verisure me proposait 2 000 € d'installation et 50 € par mois. Ce qu'on voulait, c'était être prévenus — pas une intervention. Voici l'alarme que j'ai montée avec Alarmo, et ce qu'elle ne fait pas."
 pubDate: 2026-08-20

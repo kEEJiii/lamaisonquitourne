@@ -117,6 +117,6 @@ Rien ici n'est théorique. Si c'est publié, c'est que ça tourne chez moi ✅
 
 Une question, une correction, un truc qui ne marche pas chez vous ?
 
-**XXX@lamaisonquitourne.fr**
+**contact@lamaisonquitourne.fr**
 
 Je réponds quand je peux. Comptez quelques jours — j'ai un travail, deux enfants et un jardin 🌿

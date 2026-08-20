@@ -88,86 +88,59 @@ Sur l'iPhone : app **Maison** → **+** → **Ajouter un accessoire** → scanne
 
 Le pont apparaît, puis les accessoires arrivent un par un. Compte une à deux minutes si tu exposes beaucoup d'entités.
 
-## Ce que ça donne concrètement
-
-Une fois filtré, voilà ce que Marie voit dans son app Maison.
-
-**Les volets**, un par pièce : Bureau, Buanderie, Chambre Léon, Chambre Rose, Suite Parentale, Cuisine, Salle à Manger, Salon, plus la porte de garage.
-
-**Les lumières** : Entrée, Terrasse, Couloir, Évier, Hotte, Lampe de chevet, Lumière Buanderie, Garage 1 et Garage 2.
-
-**Les capteurs d'ouverture** : fenêtres des chambres, salle de bain, salle de douche, toilettes du bas et de l'étage, porte de la buanderie.
-
-**Quelques capteurs utiles** : détecteur de présence garage, détecteur de fuite d'eau sur l'arrosage.
-
-**Une prise** dans la buanderie, et la fontaine à eau du chat.
-
-Le principe qui guide tout ça : est-ce que quelqu'un va vouloir l'actionner ou le consulter depuis son téléphone ? Si non, ça reste dans Home Assistant.
-
-<!-- CAPTURE 5 : liste des entités exposées, côté configuration HA -->
-
 ## Pourquoi j'ai fini avec trois ponts
 
 Voilà le point que je n'ai trouvé nulle part en français, et qui m'a coûté du temps.
 
-Certains accessoires refusent de cohabiter dans un pont partagé. HomeKit impose que quelques types d'appareils soient exposés seuls, en mode accessoire, avec leur propre appairage.
+Certains types d'accessoires **ne peuvent pas vivre dans un pont partagé**. Home Assistant l'écrit dans sa documentation, mais on ne tombe dessus qu'après avoir cherché : une caméra, une serrure, une télécommande à activités ou un téléviseur doivent être exposés en mode `accessory`, seuls, avec leur propre appairage.
 
-Chez moi, ça concerne deux cas :
+Un téléviseur, côté Home Assistant, c'est une entité `media_player` avec la classe `tv` ou `receiver`. C'est le cas de ma Samsung The Frame. D'où son pont dédié.
+
+Chez moi, ça donne :
 
 | Pont | Contenu | Pourquoi séparé |
 |---|---|---|
 | `HASS Bridge` | Le gros du système, 10 domaines | Pont principal |
-| `TV Bridge the frame` | La télévision | À COMPLÉTER |
-| `Vanne Garage Bridge` | La vanne d'arrosage | À COMPLÉTER |
+| `TV Bridge the frame` | La télévision | Obligatoire : un téléviseur ne peut pas être ponté |
+| `Vanne Garage Bridge` | La vanne d'arrosage | À COMPLÉTER — raison différente de la TV |
 
-Les deux ponts secondaires sont déclarés en YAML, pas via l'interface. C'est plus simple à maintenir quand on multiplie les ponts.
+Les deux ponts secondaires sont déclarés en YAML plutôt que via l'interface. C'est plus simple à relire quand on multiplie les ponts.
 
 <!-- BLOC YAML À INSÉRER : la config des deux ponts secondaires -->
 
-Si un accessoire refuse obstinément d'apparaître correctement dans l'app Maison, la question à se poser n'est pas « qu'est-ce que j'ai raté ». C'est « est-ce que ce type d'accessoire a le droit d'être dans un pont ».
+Si un accessoire refuse obstinément d'apparaître correctement dans l'app Maison, la bonne question n'est donc pas « qu'est-ce que j'ai raté ». C'est : **est-ce que ce type d'accessoire a le droit d'être dans un pont ?**
 
-## Ce que j'ai raté, et qui traîne encore
+Le raccourci utile : caméra, serrure, téléviseur, télécommande à activités — chacun son pont.
 
-Trois problèmes que j'ai découverts en regardant l'app Maison avec les yeux de Marie. Aucun n'empêche le système de fonctionner. Tous les trois le rendent pénible à utiliser.
+## La galère qui m'a fait perdre une soirée
 
-### Deux accessoires portent le même nom
+Un soir, j'ouvre l'app Maison. C'est le bordel.
 
-Le symptôme est simple. Dans la chambre de mon fils, l'app Maison affiche deux tuiles nommées « Chambre Léon ». Rigoureusement identiques.
+Des dizaines de tuiles que je n'avais jamais vues. Des boutons partout, avec des noms incompréhensibles, dans toutes les pièces. Une app devenue inutilisable.
 
-Ce sont deux entités différentes :
+**Ce que j'avais fait juste avant :** retirer un bouton de la liste des entités exposées. Un seul. Le dernier de la liste du domaine `button`.
 
-| Nom affiché | Entité Home Assistant | Ce que c'est |
-|---|---|---|
-| Chambre Léon | `cover.chambre_enfant` | Le volet roulant |
-| Chambre Léon | `binary_sensor.aqara_door_and_window_sensor_porte_12` | Le capteur de la fenêtre |
+**Ce que je croyais :** qu'en enlevant la dernière entité d'un domaine, ce domaine cessait d'être exposé.
 
-Le volet vient de la box Overkiz. Le capteur vient d'un Aqara. Aucun des deux ne sait que l'autre existe. Chacun a hérité du nom de sa pièce, et Home Assistant n'a rien à y redire.
+**Ce que c'était vraiment :** l'inverse exact. Le pont applique le filtre d'entités **seulement s'il en existe un**. Une liste vide ne veut pas dire « n'expose rien ». Elle veut dire « pas de filtre » — donc expose tout le domaine.
 
-Côté iPhone, c'est autre chose. Deux tuiles jumelles, et Siri qui doit deviner. « Ferme Chambre Léon » devient un tirage au sort.
+En retirant le dernier bouton, j'avais supprimé le filtre lui-même. Tous les boutons de tous mes appareils Aqara sont remontés d'un coup.
 
-**Le correctif :** renommer explicitement côté Home Assistant. Le capteur devient « Fenêtre Chambre Léon », le volet reste « Volet Chambre Léon ». Le nom de la pièce est déjà porté par la pièce elle-même — le répéter dans chaque accessoire n'apporte rien.
+**Le correctif :** décocher carrément le domaine `button` dans la configuration du pont, plutôt que de vider sa liste d'entités.
 
-Le même problème existe dans la Chambre Rose. À COMPLÉTER : vérifier les autres pièces.
+C'est contre-intuitif, ce n'est écrit nulle part, et ça peut arriver sur n'importe quel domaine. Si tu vides une liste d'entités en pensant faire le ménage, tu obtiens exactement le résultat inverse.
 
-### Des boutons de diagnostic sont partis chez Apple
+## Une astuce de nommage qui surprend
 
-Dans ma liste d'accessoires exposés, il y a un bouton nommé « Identifier ».
+Dans la chambre de mon fils, l'app Maison affiche deux tuiles nommées « Chambre Léon ». Le volet roulant et le capteur de la fenêtre. Rigoureusement le même nom.
 
-Ce n'est pas une commande. C'est la fonction d'identification physique d'un capteur Aqara : elle fait clignoter la LED pour qu'on retrouve l'appareil dans un placard. Utile une fois, à l'installation.
+C'est volontaire, et ça ne pose aucun problème.
 
-Elle est arrivée là parce que j'ai inclus le domaine `button` dans le pont. Or chaque appareil Aqara génère son propre bouton « Identifier ». Ils sont tous passés.
+D'abord parce que la pièce porte déjà son nom : répéter « volet » ou « capteur » dans chaque accessoire alourdit l'affichage sans rien apporter. On gagne en lisibilité.
 
-**Le correctif :** exclure ces entités du pont, ou les masquer dans Home Assistant. C'est le genre de ménage qu'il vaut mieux faire tôt — chaque nouvel appareil en rajoute un.
+Ensuite parce que **Siri tranche toute seule, par le verbe.** « Ouvre Chambre Léon » ne peut viser qu'un volet — on n'ouvre pas un capteur d'ouverture. Le contexte de la commande suffit à lever l'ambiguïté.
 
-### Les noms constructeur sont restés en anglais
-
-« Pet Drinking Fountain ». « Indicator Light ».
-
-Ces noms viennent du fabricant. Home Assistant les reprend tels quels, et le pont les transmet sans les toucher. Résultat : une fontaine à eau pour le chat s'appelle « Pet Drinking Fountain » dans une app entièrement en français.
-
-Pour moi c'est lisible. Pour quelqu'un qui ouvre l'app Maison sans savoir ce qu'il y a derrière, c'est du bruit.
-
-**Le correctif :** renommer dans Home Assistant avant d'exposer, jamais après. Un renommage tardif peut recréer l'accessoire côté Apple, et il perd alors sa pièce et ses automatisations.
+C'est contre-intuitif quand on vient de Home Assistant, où l'identifiant unique est roi. Côté Apple, l'interprétation est plus souple qu'on ne le croit.
 
 <!--
 À COMPLÉTER — pistes vécues à ajouter :
@@ -186,9 +159,9 @@ Pour moi c'est lisible. Pour quelqu'un qui ouvre l'app Maison sans savoir ce qu'
 
 ## Le matériel et les versions
 
-- Home Assistant : version XX
+- Home Assistant : 2026.8.2
 - Intégration : HomeKit Bridge (native, aucune installation supplémentaire)
-- Côté Apple : iPhone sous iOS XX
+- Côté Apple : iPhone sous iOS 26
 - Aucun abonnement, aucun matériel additionnel
 
 ---
@@ -197,4 +170,4 @@ Pour moi c'est lisible. Pour quelqu'un qui ouvre l'app Maison sans savoir ce qu'
 
 Le pont installé, la vraie question arrive : **qu'est-ce qu'on expose, et qu'est-ce qu'on garde dans Home Assistant ?**
 
-Parce qu'exposer tout est aussi raté que ne rien exposer. C'est le sujet du prochain article.
+Parce que tout exposer est aussi raté que ne rien exposer. Si l'app Maison de ma femme déborde de capteurs de batterie, elle ne l'ouvre plus. C'est le sujet du prochain article.

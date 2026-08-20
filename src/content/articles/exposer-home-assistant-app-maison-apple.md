@@ -170,4 +170,4 @@ C'est contre-intuitif quand on vient de Home Assistant, où l'identifiant unique
 
 Le pont installé, la vraie question arrive : **qu'est-ce qu'on expose, et qu'est-ce qu'on garde dans Home Assistant ?**
 
-Parce que tout exposer est aussi raté que ne rien exposer. Si l'app Maison de ma femme déborde de capteurs de batterie, elle ne l'ouvre plus. C'est le sujet du prochain article.
+Parce que tout exposer est aussi raté que ne rien exposer. Si l'app Maison de ma femme déborde de capteurs de batterie, elle ne l'ouvre plus. C'est le sujet du [prochain article](/articles/quoi-exposer-app-maison-apple/).

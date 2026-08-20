@@ -191,8 +191,6 @@ C'est l'ordre de grandeur d'une année d'abonnement à une alarme commerciale. S
 ## Ce que je n'achèterais pas au début
 
 - **Un écran mural dédié.** On croit qu'on va l'utiliser. On utilise son téléphone.
-- **Des ampoules connectées à la place des modules.** Elles ne servent à rien si quelqu'un coupe l'interrupteur, et il coupera l'interrupteur.
-- **Du matériel Wi-Fi propriétaire.** Chaque marque impose son application et son cloud. C'est exactement ce à quoi Home Assistant sert à échapper.
 - **Une caméra, en premier achat.** C'est le plus visible, mais rarement le plus utile. Les capteurs d'ouverture apportent davantage.
 
 ## Ce que je regrette

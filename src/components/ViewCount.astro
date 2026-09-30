@@ -1,0 +1,28 @@
+---
+const { slug, increment = false } = Astro.props;
+---
+<span class="view-count" data-view-slug={slug} data-view-increment={increment ? 'true' : undefined} hidden title="Lectures depuis l’activation du compteur">
+  <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+  <span data-view-value></span>
+</span>
+<script>
+  const displayed = document.querySelectorAll<HTMLElement>('[data-view-slug]');
+  const formatter = new Intl.NumberFormat('fr-FR');
+  for (const slug of new Set(Array.from(displayed, el => el.dataset.viewSlug!))) {
+    const elements = Array.from(displayed).filter(el => el.dataset.viewSlug === slug);
+    const key = `article-view:${slug}`;
+    let increment = elements.some(el => el.dataset.viewIncrement === 'true');
+    try { increment = increment && sessionStorage.getItem(key) !== '1'; } catch { /* Le compteur fonctionne aussi sans stockage local. */ }
+    fetch(`/api/views/${encodeURIComponent(slug)}`, { method: increment ? 'POST' : 'GET' })
+      .then(async response => {
+        if (!response.ok) throw new Error('Compteur indisponible');
+        const { count } = await response.json();
+        if (!Number.isSafeInteger(count) || count < 0) throw new Error('Compteur invalide');
+        if (increment) { try { sessionStorage.setItem(key, '1'); } catch {} }
+        for (const el of elements) {
+          el.querySelector('[data-view-value]')!.textContent = `${formatter.format(count)} ${count === 1 ? 'vue' : 'vues'}`;
+          el.hidden = false;
+        }
+      }).catch(() => { /* Aucun nombre fictif en cas de panne. */ });
+  }
+</script>

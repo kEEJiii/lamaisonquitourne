@@ -114,3 +114,25 @@ public/                   ← logos, favicons, robots.txt
 ```
 
 Pour changer une couleur ou une police, tout est en haut de `src/styles/global.css`.
+
+## Compteurs de lecture
+
+Le déploiement Workers utilise `src/server/worker.js`, le binding d’assets `ASSETS`
+et le Durable Object SQLite `ArticleViews`. La migration `article-views-v1` crée
+le stockage au déploiement ; aucun identifiant de base ni secret n’est nécessaire.
+Les totaux démarrent à zéro et restent persistants entre déploiements.
+
+- `GET /api/views/<slug>` consulte le total sans l’incrémenter.
+- `POST /api/views/<slug>` ajoute une lecture ; les requêtes doivent provenir du site.
+- Les tuiles lisent uniquement. Un article compte au plus une fois par session et
+  par navigateur lorsque `sessionStorage` est disponible.
+- Les chiffres sont indicatifs, sans détection exhaustive des robots ou fraude.
+- Aucun numéro n’est affiché si le service ne répond pas. Aucun faux total n’est utilisé.
+- `npm run build` met à jour la liste des articles publiés autorisés par l’API.
+- `node --test tests/views.test.js` vérifie les règles de l’API.
+- `npx wrangler dev --local` permet de tester stockage et API sur le port local affiché.
+
+La configuration actuelle vise Cloudflare **Workers Builds**, pas Pages.
+La commande de déploiement est `npx wrangler deploy` après `npm run build`.
+Ne pas supprimer ou renommer le binding/la classe ni réinitialiser la migration
+pour conserver les nombres de vues.

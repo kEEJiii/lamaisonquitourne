@@ -175,3 +175,6 @@ h1,h2,h3{overflow-wrap:anywhere}
 @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:2rem}.hero-note{max-width:38rem}.hero{padding-block:3rem}.start-grid{grid-template-columns:1fr}.start-card{padding:1.25rem}.start-card p{margin-bottom:.75rem}.home-section{padding-block:2rem}}
 @media(max-width:640px){.section-heading{align-items:flex-start;flex-direction:column;gap:.75rem}.carte{padding:1.25rem}.featured-list .carte{padding:1.5rem}.liste{grid-template-columns:1fr}.hero-note{padding:1.5rem}.resource-note{align-items:flex-start;flex-direction:column;gap:1rem}.site-header .bar{gap:.6rem;padding-inline:1rem}.nav{gap:.6rem;font-size:.78rem}.brand svg{width:27px}.carte-bottom{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+.view-count{display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;white-space:nowrap;color:inherit}
+.view-count[hidden]{display:none}
+.card-stats{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1rem}

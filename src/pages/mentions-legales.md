@@ -57,3 +57,8 @@ Les contenus publiés décrivent une installation domotique personnelle. Ils son
 Toute intervention sur une installation électrique doit être réalisée par une personne qualifiée.
 
 *Dernière mise à jour : 20 août 2026*
+
+
+### Compteurs de lecture
+
+Chaque article affiche un total de lectures depuis l’activation des compteurs. Seul ce total est enregistré dans le stockage Cloudflare du site : le compteur ne conserve ni adresse IP ni identifiant de lecteur. Une marque temporaire dans le stockage de session du navigateur évite de recompter le même article à chaque rafraîchissement. Elle disparaît à la fin de la session. Ces nombres sont indicatifs et ne représentent pas des visiteurs uniques.

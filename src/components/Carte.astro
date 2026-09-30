@@ -1,4 +1,5 @@
 ---
+import ViewCount from './ViewCount.astro';
 import { readingMinutes } from '../utils/articles';
 const { article } = Astro.props;
 const d = article.data;
@@ -12,6 +13,6 @@ const dateFr = d.pubDate.toLocaleDateString('fr-FR', { year: 'numeric', month: '
     </div>
     <h3>{d.title}</h3>
     <p>{d.description}</p>
-    <span class="carte-bottom"><span>{readingMinutes(article.body)} min de lecture</span><span class="read-link">Lire l’article <span aria-hidden="true">↗</span></span></span>
+    <span class="carte-bottom"><span class="card-stats"><span>{readingMinutes(article.body)} min de lecture</span><ViewCount slug={article.id} /></span><span class="read-link">Lire l’article <span aria-hidden="true">↗</span></span></span>
   </a>
 </li>

@@ -7,6 +7,14 @@ const annee = new Date().getFullYear();
       <div style="max-width:22rem">
         <strong style="font-family:var(--font-titre);color:var(--encre)">La Maison qui Tourne</strong>
         <p style="margin-top:.4rem">Home Assistant dans une vraie maison, avec deux enfants et un chat.</p>
+        <a class="instagram-link" href="https://www.instagram.com/lamaisonquitourne/" rel="me">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          <span>Suivre sur Instagram</span>
+        </a>
       </div>
       <nav>
         <a href="/articles/">Tous les articles</a>
@@ -27,3 +35,31 @@ const annee = new Date().getFullYear();
     </p>
   </div>
 </footer>
+
+<style>
+  .site-footer .instagram-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    min-height: 44px;
+    margin-top: .85rem;
+    padding: .5rem .85rem;
+    border: 1px solid var(--brume);
+    border-radius: 999px;
+    background: var(--blanc);
+    color: var(--encre);
+    font-weight: 500;
+  }
+
+  .instagram-link svg { flex: none; }
+
+  .site-footer .instagram-link:hover {
+    border-color: var(--encre);
+    background: var(--brume);
+  }
+
+  .instagram-link:focus-visible {
+    outline: 2px solid var(--encre);
+    outline-offset: 3px;
+  }
+</style>

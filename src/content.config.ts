@@ -14,6 +14,7 @@ const articles = defineCollection({
       'Chauffage & confort',
       'Matériel & réseau',
       'Extérieur',
+      'Automatisations du quotidien',
     ]),
     etat: z.enum(['tourne', 'bricole', 'abandonne']).default('tourne'),
     etatLabel: z.string().optional(),

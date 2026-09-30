@@ -2,33 +2,54 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import Carte from '../components/Carte.astro';
+import { slugCategory } from '../utils/articles';
 
 const articles = (await getCollection('articles', ({ data }) => !data.draft))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-const recents = articles.slice(0, 8);
+const categories = [...new Set(articles.map(a => a.data.category))];
+const featured = articles[0];
+const recents = articles.slice(1, 7);
+const parcours = [
+  { step: '01', title: 'Choisir les bonnes bases', text: 'Le matériel, le réseau et les erreurs à éviter pour démarrer.', href: '/articles/materiel-debuter-home-assistant/' },
+  { step: '02', title: 'Garder l’app Maison', text: 'Home Assistant derrière, une interface familière devant.', href: '/articles/exposer-home-assistant-app-maison-apple/' },
+  { step: '03', title: 'Sécuriser la maison', text: 'Une alarme locale et les leçons des premiers faux positifs.', href: '/articles/alarme-maison-sans-abonnement-alarmo/' },
+];
 ---
-<Base
-  title="La Maison qui Tourne"
-  description="Home Assistant dans une vraie maison, avec deux enfants et un chat. Tutoriels, retours d'expérience et solutions testées en conditions réelles.">
-
+<Base title="La Maison qui Tourne" description="Home Assistant dans une vraie maison. Tutoriels, retours d'expérience et solutions testées en conditions réelles.">
   <section class="hero">
-    <div class="wrap">
-      <h1>Home Assistant dans une vraie maison</h1>
-      <p>
-        Pas un labo. Une maison habitée, avec une famille qui utilise l'app Maison de l'iPhone
-        et ne veut pas savoir ce qu'il y a derrière. Ce qui tourne, ce qui casse, et pourquoi.
-      </p>
+    <div class="wrap-large hero-grid">
+      <div>
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Domotique vécue, au quotidien</p>
+        <h1>Une maison connectée.<br /><span>Une vie plus simple.</span></h1>
+        <p>Home Assistant dans une vraie maison, avec une famille qui utilise l’app Maison de l’iPhone. Ce qui tourne, ce qui casse, et ce que j’en retiens.</p>
+        <div class="hero-actions">
+          <a class="button" href="#commencer">Par où commencer <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="/articles/">Explorer les articles <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="La philosophie du blog">
+        <span class="note-label">Le fil conducteur</span>
+        <p>La meilleure automatisation ?<br /><strong>Celle qu’on finit par oublier.</strong></p>
+        <ul><li>Des besoins concrets</li><li>Des explications accessibles</li><li>Les réussites et les ratés</li></ul>
+        <a href="/a-propos/">Bienvenue à la maison <span aria-hidden="true">→</span></a>
+      </aside>
     </div>
   </section>
-
-  <section class="wrap" style="padding-block:2.5rem">
-    <h2 class="section-titre">Derniers articles</h2>
-    {recents.length === 0 ? (
-      <p style="color:var(--ardoise)">Les premiers articles arrivent bientôt.</p>
-    ) : (
-      <ul class="liste">
-        {recents.map(a => <Carte article={a} />)}
-      </ul>
-    )}
+  <section class="wrap-large home-section" id="commencer">
+    <div class="section-heading"><div><p class="eyebrow">Les premières étapes</p><h2>Un point de départ, pas un labyrinthe.</h2></div></div>
+    <ol class="start-grid">
+      {parcours.map(p => <li><a class="start-card" href={p.href}><span class="step">{p.step}</span><h3>{p.title}</h3><p>{p.text}</p><span class="read-link">Ouvrir le guide <span aria-hidden="true">→</span></span></a></li>)}
+    </ol>
+  </section>
+  <section class="wrap-large home-section">
+    <div class="section-heading"><div><p class="eyebrow">À lire maintenant</p><h2>Derniers retours de la maison</h2></div><a class="text-link" href="/articles/">Tous les articles <span aria-hidden="true">→</span></a></div>
+    {featured && <ul class="liste featured-list"><Carte article={featured} /></ul>}
+    <ul class="liste">{recents.map(a => <Carte article={a} />)}</ul>
+    {articles.length === 0 && <p>Les premiers articles arrivent bientôt.</p>}
+  </section>
+  <section class="wrap-large home-section topics-section">
+    <p class="eyebrow">Suivre un sujet</p><h2>À chaque envie, son coin de la maison.</h2>
+    <nav class="topics" aria-label="Catégories d’articles">{categories.map(cat => <a href={`/categories/${slugCategory(cat)}/`}>{cat} <span aria-hidden="true">↗</span></a>)}</nav>
+    <div class="resource-note"><p><strong>Besoin d’un coup de pouce ?</strong> Documentation, communauté et outils : les liens utiles sont réunis au même endroit.</p><a class="text-link" href="/ressources/">Voir les ressources <span aria-hidden="true">→</span></a></div>
   </section>
 </Base>

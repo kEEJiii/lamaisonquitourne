@@ -27,7 +27,7 @@ export async function getStaticPaths() {
 const { nom, articles } = Astro.props;
 ---
 <Base title={nom} description={`Tous les articles de la catégorie ${nom}.`}>
-  <section class="wrap" style="padding-block:2.5rem">
+  <section class="wrap-large" style="padding-block:2.5rem">
     <p class="section-titre">Catégorie</p>
     <h1 style="font-family:var(--font-titre);font-weight:800;font-size:2rem;letter-spacing:-.03em;margin-bottom:1.5rem">{nom}</h1>
     <ul class="liste">

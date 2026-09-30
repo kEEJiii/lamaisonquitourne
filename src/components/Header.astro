@@ -14,7 +14,7 @@ const liens = [
       <Logo size={30} />
       <span>La Maison<br />qui Tourne</span>
     </a>
-    <nav class="nav">
+    <nav class="nav" aria-label="Navigation principale">
       {liens.map(l => (
         <a href={l.href} aria-current={path.startsWith(l.href) ? 'page' : undefined}>{l.texte}</a>
       ))}

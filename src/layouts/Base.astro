@@ -38,8 +38,9 @@ const titreComplet = title === 'La Maison qui Tourne' ? title : `${title} — La
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <Header />
-  <main>
+  <main id="contenu" tabindex="-1">
     <slot />
   </main>
   <Footer />

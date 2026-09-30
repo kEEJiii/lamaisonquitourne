@@ -1,8 +1,14 @@
 ---
 import Base from './Base.astro';
 import Chip from '../components/Chip.astro';
+import { getCollection } from 'astro:content';
+import Carte from '../components/Carte.astro';
+import { readingMinutes } from '../utils/articles';
 
-const { article } = Astro.props;
+const { article, headings = [] } = Astro.props;
+const toc = headings.filter(h => h.depth === 2);
+const others = (await getCollection('articles', ({ data }) => !data.draft)).filter(a => a.id !== article.id);
+const related = others.sort((a, b) => Number(b.data.category === article.data.category) - Number(a.data.category === article.data.category) || b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 2);
 const d = article.data;
 const dateFr = (v: Date) => v.toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' });
 const slugCat = d.category.toLowerCase()
@@ -12,17 +18,21 @@ const slugCat = d.category.toLowerCase()
 <Base title={d.title} description={d.description}>
   <article>
     <div class="wrap article-header">
+      <a class="back-link" href="/articles/">← Tous les articles</a>
       <a class="cat" href={`/categories/${slugCat}/`}>{d.category}</a>
       <h1>{d.title}</h1>
       <p class="chapo">{d.description}</p>
       <div class="infos">
+        <span>{readingMinutes(article.body)} min de lecture</span>
         <Chip etat={d.etat} label={d.etatLabel} />
         <time datetime={d.pubDate.toISOString()}>{dateFr(d.pubDate)}</time>
         {d.updatedDate && <span>Mis à jour le {dateFr(d.updatedDate)}</span>}
       </div>
     </div>
     <div class="wrap prose">
+      {toc.length > 1 && <details class="article-toc"><summary>Dans cet article</summary><nav aria-label="Sommaire de l’article"><ol>{toc.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav></details>}
       <slot />
     </div>
   </article>
+  {related.length > 0 && <section class="wrap-large related-section"><h2 class="section-titre">Pour continuer</h2><ul class="liste">{related.map(a => <Carte article={a} />)}</ul></section>}
 </Base>

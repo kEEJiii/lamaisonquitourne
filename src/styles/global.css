@@ -179,3 +179,15 @@ h1,h2,h3{overflow-wrap:anywhere}
 .view-count{display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;white-space:nowrap;color:inherit}
 .view-count[hidden]{display:none}
 .card-stats{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1rem}
+
+/* Parcours d’accueil compact pour laisser la place aux articles. */
+#commencer{padding-block:1.25rem}
+#commencer .section-heading{margin-bottom:.85rem}
+#commencer .eyebrow{margin-bottom:.35rem}
+#commencer h2{font-size:clamp(1.1rem,2vw,1.4rem)}
+#commencer .start-grid{gap:.5rem}
+#commencer .start-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:.65rem;padding:.75rem 1rem;min-height:48px;border-radius:10px}
+#commencer .start-card h3{margin:0;font-size:.95rem}
+#commencer .start-card p,#commencer .start-card .read-link{display:none}
+#commencer .start-card::after{content:'→';font-size:1rem}
+#commencer + .home-section{padding-top:1.5rem}

@@ -13,7 +13,7 @@ const categories = [...new Set(articles.map(a => a.data.category))];
     <h1 style="font-family:var(--font-titre);font-weight:800;font-size:2rem;letter-spacing:-.03em;margin-bottom:1.5rem">Tous les articles</h1>
     <nav class="topics" aria-label="Catégories d’articles">{categories.map(cat => <a href={`/categories/${slugCategory(cat)}/`}>{cat}</a>)}</nav>
     <ul class="liste">
-      {articles.map(a => <Carte article={a} />)}
+      {articles.map(a => <Carte article={a} headingLevel={2} />)}
     </ul>
   </section>
 </Base>

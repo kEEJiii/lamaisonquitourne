@@ -16,7 +16,7 @@ const slugCat = d.category.toLowerCase()
   .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
   .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 ---
-<Base title={d.title} description={d.description}>
+<Base title={d.title} description={d.description} article={{ published: d.pubDate, modified: d.updatedDate }}>
   <article>
     <div class="wrap article-header">
       <a class="back-link" href="/articles/">← Tous les articles</a>

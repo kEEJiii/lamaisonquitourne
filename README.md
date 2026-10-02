@@ -136,3 +136,19 @@ La configuration actuelle vise Cloudflare **Workers Builds**, pas Pages.
 La commande de déploiement est `npx wrangler deploy` après `npm run build`.
 Ne pas supprimer ou renommer le binding/la classe ni réinitialiser la migration
 pour conserver les nombres de vues.
+
+## SEO et images de partage
+
+Chaque article publié expose des données structurées `BlogPosting` (titre,
+description, URL canonique, auteur Alex lié à la page À propos et date de publication).
+La date de modification est ajoutée uniquement lorsque `updatedDate` est renseigné.
+Le prénom de l’auteur est également affiché dans l’en-tête de l’article.
+
+`src/pages/og/[slug].png.ts` génère automatiquement une image PNG de 1200 × 630
+pour chaque article publié lors du build. Elle reprend le titre, la catégorie,
+le logo et les couleurs du blog. Les balises Open Graph et Twitter utilisent
+cette même image. Les brouillons n’ont pas d’image publique.
+
+La génération utilise Satori et Resvg au build ; elle n’ajoute aucun JavaScript
+au navigateur. La police Bricolage Grotesque est embarquée avec sa licence OFL
+pour éviter de dépendre du réseau ou des polices installées sur le serveur.

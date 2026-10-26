@@ -50,6 +50,7 @@ const parcours = [
   <section class="wrap-large home-section topics-section">
     <p class="eyebrow">Suivre un sujet</p><h2>À chaque envie, son coin de la maison.</h2>
     <nav class="topics" aria-label="Catégories d’articles">{categories.map(cat => <a href={`/categories/${slugCategory(cat)}/`}>{cat} <span aria-hidden="true">↗</span></a>)}</nav>
+    <div class="resource-note maison-invitation"><p><strong>À quoi ça sert, chez moi ?</strong> Du salon au jardin, découvre les équipements, les usages et les guides qui vont avec.</p><a class="text-link" href="/la-maison/">Visiter la maison <span aria-hidden="true">→</span></a></div>
     <div class="resource-note"><p><strong>Besoin d’un coup de pouce ?</strong> Documentation, communauté et outils : les liens utiles sont réunis au même endroit.</p><a class="text-link" href="/ressources/">Voir les ressources <span aria-hidden="true">→</span></a></div>
   </section>
 </Base>

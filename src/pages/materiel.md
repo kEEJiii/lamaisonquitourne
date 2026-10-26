@@ -6,11 +6,15 @@ description: "Tout le matériel domotique installé chez moi, avec mon avis apr�
 
 # Mon matériel
 
-Cette page liste **tout ce qui est réellement installé chez moi**, avec mon avis après usage.
+Cette page rassemble **le matériel de mon installation décrit sur le blog**, avec mon avis après usage.
 
 Une seule règle : rien n'y figure si je ne l'utilise pas au quotidien. Pas de matériel testé une semaine, pas de produit reçu gratuitement, pas de recommandation sur catalogue.
 
 Les prix sont des ordres de grandeur. Ils bougent beaucoup, notamment chez les revendeurs français qui font plusieurs opérations promotionnelles par an.
+
+*Liens et usages mis à jour le 26 octobre 2026. Les prix ci-dessous n’ont pas été réactualisés à cette date.*
+
+Pour voir à quoi ces équipements servent au quotidien, commence par [la visite de la maison, pièce par pièce](/la-maison/).
 
 ---
 
@@ -34,9 +38,9 @@ Si je devais recommander à quelqu'un qui démarre sans envie de bricoler : **Ho
 | Matériel | Prix | Mon avis |
 |---|---|---|
 | **Sonoff ZBDongle-E** (Zigbee 3.0 USB Dongle Plus V2) | ~25 € | Le coordinateur. Fonctionne avec ZHA, l'intégration native de Home Assistant. Rien à installer. |
-| **Rallonge USB** | ~2 € | Le meilleur rapport qualité/prix de toute mon installation. Éloigner la clé de trente centimètres double la portée. |
+| **Rallonge USB** | ~2 € | Permet d’éloigner la clé du Raspberry Pi et des sources d’interférences. Un petit accessoire à prévoir dès le départ. |
 
-Sans la rallonge, la clé subit les interférences du port USB 3 et du Wi-Fi. C'est la cause numéro un des capteurs qui décrochent, et ça coûte deux euros à régler.
+La rallonge aide à éloigner le coordinateur des ports USB et du Wi-Fi. Le résultat dépend de l’environnement radio et de la disposition du réseau ; ce n’est pas une garantie de portée.
 
 ---
 
@@ -90,7 +94,43 @@ Leur vraie fonction est sociale : elles permettent à quelqu'un qui n'a pas ton 
 | **Sirène extérieure Tuya** | ~35 € | Complète la précédente. Une alarme qui ne s'entend pas dehors ne dissuade personne. |
 | **Alarmo** | Gratuit | Extension Home Assistant. Transforme des capteurs en vrai système d'alarme, sans abonnement. |
 
-C'est le sujet qui m'a demandé le plus de recherches, et celui où j'ai trouvé le moins de choses en français. Un article lui sera consacré.
+Le retour est publié : [pourquoi j’ai choisi Alarmo plutôt qu’une alarme avec abonnement](/articles/alarme-maison-sans-abonnement-alarmo/), avec le matériel, le fonctionnement et les limites.
+
+J’ai aussi détaillé [le filtre de confirmation pour les capteurs de vibration](/articles/faux-positifs-capteur-vibration-alarme/). Il réduit certaines remontées isolées au prix d’une détection moins immédiate.
+
+---
+
+## La protection contre les fuites
+
+| Matériel | Prix | Son rôle |
+|---|---|---|
+| **Détecteurs de fuite Aqara** | — | Remontent une présence d’eau à leur emplacement. |
+| **Module de coupure d’eau Tuya** | ~30 € pour le module | Commande la fermeture de l’arrivée générale. Sa compatibilité avec la vanne et le montage doit être vérifiée. |
+
+Le module seul ne constitue pas une installation complète : il faut les détecteurs, leur connexion à Home Assistant et, selon le montage, une intervention sur la plomberie.
+
+Le guide explique [la détection de fuite, la coupure d’eau et les vérifications à prévoir](/articles/fuite-eau-coupure-home-assistant/), notamment la différence entre une commande envoyée et une fermeture réellement obtenue. Après une fuite, la remise en eau reste volontaire.
+
+---
+
+## L’électroménager et les notifications
+
+| Équipement | Dans mon installation |
+|---|---|
+| **Four et lave-vaisselle Bosch** | Intégrés à Home Assistant ; l’application Home Connect garde son rôle pour les fonctions propres aux appareils. |
+| **Lave-linge LG** | Son état remonte dans Home Assistant. |
+| **Application Home Assistant Companion** | Reçoit les notifications sur le téléphone. |
+
+Le guide [lave-linge et lave-vaisselle : une notification quand le cycle est terminé](/articles/notifications-fin-lavage-home-assistant/) donne un exemple YAML anonymisé et la méthode pour le tester. Les notifications restent à valider sur plusieurs vrais cycles ; enregistrer l’automatisation ne suffit pas.
+
+---
+
+## L’interface au quotidien
+
+**HomeKit Bridge**, l’intégration native de Home Assistant, fait le lien avec l’app Maison d’Apple. Les lumières, les volets et les commandes utiles y ont leur place ; les diagnostics restent dans Home Assistant.
+
+- [Installer le pont HomeKit](/articles/exposer-home-assistant-app-maison-apple/).
+- [Choisir ce qu’on expose dans l’app Maison](/articles/quoi-exposer-app-maison-apple/).
 
 ---
 
@@ -99,8 +139,9 @@ C'est le sujet qui m'a demandé le plus de recherches, et celui où j'ai trouvé
 | Matériel | Prix | Mon avis |
 |---|---|---|
 | **Sonoff SWV** (vanne d'arrosage) | ~35 € | Se visse sur le robinet. Pilote l'arrosage du jardin depuis Home Assistant. |
-| **Module de coupure d'eau Tuya** | ~30 € | Ferme l'arrivée générale si une fuite est détectée. Trente euros qui peuvent éviter un sinistre. |
-| **Robot tondeuse Navimow** | — | Un article dédié viendra, après une saison complète d'usage. |
+| **Robot tondeuse Navimow** | — | Installé au jardin. Je garde son application dédiée pour la carte et les zones de tonte. |
+
+L’arrosage et la tonte ont leur place dans [la visite du jardin](/la-maison/#jardin). La coupure générale est détaillée plus haut, dans [la protection contre les fuites](#la-protection-contre-les-fuites).
 
 ---
 
@@ -125,4 +166,4 @@ Le seul lien affilié de cette page est celui vers Domadoo ci-dessus. Aucun prod
 
 Tout le matériel listé ici a été acheté de ma poche et est installé chez moi. Si d'autres liens affiliés apparaissent un jour, ce sera écrit noir sur blanc, produit par produit.
 
-*Page mise à jour au fil des articles.*
+Pour revenir aux usages plutôt qu’aux références, retrouve [la maison, pièce par pièce](/la-maison/).

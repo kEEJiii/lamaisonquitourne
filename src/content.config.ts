@@ -20,6 +20,13 @@ const articles = defineCollection({
     etatLabel: z.string().optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
+    pratique: z.object({
+      difficulte: z.string(),
+      materiel: z.array(z.string()).min(1),
+      etapes: z.array(z.string()).min(1),
+      lien: z.object({ href: z.string(), texte: z.string() }).optional(),
+      note: z.string().optional(),
+    }).optional(),
   }),
 });
 

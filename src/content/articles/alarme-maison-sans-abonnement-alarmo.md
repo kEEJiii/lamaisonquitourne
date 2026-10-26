@@ -7,6 +7,18 @@ category: "Sécurité & présence"
 etat: "tourne"
 etatLabel: "Tourne chez moi"
 tags: ["alarme", "alarmo", "securite", "verisure", "sans-abonnement"]
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Intermédiaire — des essais complets sont nécessaires"
+  materiel:
+    - "Home Assistant, HACS et Alarmo"
+    - "Des capteurs d’ouverture compatibles"
+    - "Une sirène et un téléphone recevant les notifications"
+  etapes:
+    - "Ajouter les capteurs et vérifier leurs états."
+    - "Configurer les modes et les capteurs dans Alarmo."
+    - "Tester une ouverture, la sirène et la réception de l’alerte."
+  note: "Ce retour décrit une alarme autonome, sans service de télésurveillance. La configuration dépend de tes capteurs et des modes retenus ; il n’y a pas de configuration universelle à recopier."
 ---
 
 ## Le problème

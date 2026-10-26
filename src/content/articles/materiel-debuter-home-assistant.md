@@ -7,6 +7,21 @@ category: "Matériel & réseau"
 etat: "tourne"
 etatLabel: "Tourne chez moi"
 tags: ["debuter", "materiel", "zigbee", "raspberry-pi"]
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Accessible pour débuter"
+  materiel:
+    - "Un appareil pour héberger Home Assistant"
+    - "Une clé Zigbee et une rallonge USB pour les capteurs Zigbee"
+    - "Un premier équipement choisi pour un besoin précis"
+  etapes:
+    - "Choisir un usage avant d’acheter."
+    - "Installer Home Assistant et prévoir une sauvegarde hors du support principal."
+    - "Ajouter un appareil, puis vérifier son usage au quotidien."
+  lien:
+    href: "#lordre-que-je-conseille"
+    texte: "Voir l’ordre de démarrage"
+  note: "Les prix cités sont des repères, pas un devis actualisé. La pose d’un module électrique demande les compétences adaptées."
 ---
 
 ## Le problème

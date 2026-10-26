@@ -7,6 +7,20 @@ category: "Le pont HomeKit"
 etat: "tourne"
 etatLabel: "Tourne chez moi"
 tags: ["homekit", "ios", "pont", "apple", "organisation"]
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Accessible — aucun nouvel appareil à acheter"
+  materiel:
+    - "Un pont HomeKit Bridge déjà installé"
+    - "L’app Maison et l’accès à la configuration du pont"
+  etapes:
+    - "Lister les gestes réellement utiles aux habitants."
+    - "Garder les accessoires correspondants et retirer les diagnostics."
+    - "Faire tester l’interface à quelqu’un d’autre."
+  lien:
+    href: "#comment-faire-le-tri-chez-toi"
+    texte: "Utiliser les quatre questions de tri"
+  note: "Ici, le résultat vient du choix des accessoires et du nommage : aucun YAML supplémentaire n’est nécessaire."
 ---
 
 ## Le problème

@@ -178,6 +178,8 @@ h1,h2,h3{overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 .view-count{display:inline-flex;align-items:center;gap:.35rem;font-size:.76rem;white-space:nowrap;color:inherit}
 .view-count[hidden]{display:none}
+.maison-invitation{padding-bottom:1.5rem}
+.article-header .chip{white-space:normal;max-width:100%}
 .card-stats{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem 1rem}
 
 /* Parcours d’accueil compact pour laisser la place aux articles. */

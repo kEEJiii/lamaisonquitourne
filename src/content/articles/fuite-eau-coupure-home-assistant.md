@@ -7,6 +7,21 @@ etat: "tourne"
 etatLabel: "Installé chez moi — tests à refaire régulièrement"
 tags: ["fuite-eau", "aqara", "home-assistant", "coupure-eau", "automatisation"]
 draft: false
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Avancé pour la coupure automatique"
+  materiel:
+    - "Un détecteur de fuite intégré à Home Assistant"
+    - "Un téléphone pour recevoir les alertes"
+    - "Pour couper l’eau : un mécanisme compatible avec la vanne existante"
+  etapes:
+    - "Commencer par tester la détection et la notification."
+    - "Ajouter la coupure, une mémoire de fuite et la vérification de fermeture."
+    - "Vérifier les réactions au retour à sec et après une coupure de courant."
+  lien:
+    href: "#ce-que-je-testerais-avant-de-partir-tranquille"
+    texte: "Ouvrir la liste des tests"
+  note: "La logique est décrite étape par étape plutôt que livrée comme un YAML universel : les actions dépendent du module. Après une fuite, la remise en eau doit rester volontaire."
 ---
 
 ## Une notification ne ferme pas un robinet

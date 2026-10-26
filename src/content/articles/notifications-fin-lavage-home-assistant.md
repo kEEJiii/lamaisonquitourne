@@ -7,6 +7,21 @@ etat: "bricole"
 etatLabel: "À valider sur plusieurs cycles"
 tags: ["notifications", "lave-linge", "lave-vaisselle", "iphone", "automatisation"]
 draft: false
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Accessible si l’appareil fournit son état de cycle"
+  materiel:
+    - "Home Assistant et un état de programme exploitable"
+    - "L’application Companion sur le téléphone destinataire"
+    - "À défaut d’état : une mesure de puissance adaptée à l’appareil"
+  etapes:
+    - "Tester la notification sur le téléphone."
+    - "Observer les états pendant un cycle complet."
+    - "Adapter l’exemple puis vérifier plusieurs vrais cycles."
+  lien:
+    href: "#exemple-à-adapter"
+    texte: "Voir l’automatisation YAML anonymisée"
+  note: "Remplace l’entité, les valeurs d’état et l’action de notification. La détection par puissance demande une logique supplémentaire."
 ---
 
 ## Le besoin : ne plus oublier ce qui a fini de tourner

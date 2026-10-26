@@ -7,6 +7,21 @@ category: "Le pont HomeKit"
 etat: "tourne"
 etatLabel: "Tourne chez moi"
 tags: ["homekit", "ios", "pont", "apple"]
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Accessible — le réseau peut demander quelques réglages"
+  materiel:
+    - "Home Assistant et l’intégration native HomeKit Bridge"
+    - "Un iPhone ou iPad avec l’app Maison"
+    - "Un réseau local permettant la découverte mDNS"
+  etapes:
+    - "Ajouter HomeKit Bridge depuis les intégrations."
+    - "Choisir quelques entités utiles à exposer."
+    - "Appairer le pont dans Maison, puis tester un accessoire."
+  lien:
+    href: "#linstallation"
+    texte: "Suivre l’installation du pont"
+  note: "Le bloc de domaines illustre les choix du pont ; ce n’est pas un fichier configuration.yaml complet à coller tel quel."
 ---
 
 ## Le problème

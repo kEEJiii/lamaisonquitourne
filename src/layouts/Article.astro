@@ -2,6 +2,7 @@
 import Base from './Base.astro';
 import Chip from '../components/Chip.astro';
 import ViewCount from '../components/ViewCount.astro';
+import Pratique from '../components/Pratique.astro';
 import { getCollection } from 'astro:content';
 import Carte from '../components/Carte.astro';
 import { readingMinutes } from '../utils/articles';
@@ -51,6 +52,7 @@ const slugCat = d.category.toLowerCase()
       </div>
     </div>
     <div class="wrap prose">
+      {d.pratique && <Pratique pratique={d.pratique} />}
       {toc.length > 1 && <details class="article-toc"><summary>Dans cet article</summary><nav aria-label="Sommaire de l’article"><ol>{toc.map(h => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol></nav></details>}
       <slot />
     </div>

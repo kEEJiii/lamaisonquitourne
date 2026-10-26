@@ -7,6 +7,21 @@ category: "Sécurité & présence"
 etat: "tourne"
 etatLabel: "Tourne chez moi"
 tags: ["alarme", "alarmo", "aqara", "vibration", "faux-positifs"]
+updatedDate: 2026-10-26
+pratique:
+  difficulte: "Intermédiaire — assistants, automatisation et template"
+  materiel:
+    - "Un capteur de vibration intégré à Home Assistant"
+    - "Alarmo"
+    - "Un assistant date et heure par capteur à filtrer"
+  etapes:
+    - "Mémoriser la fin de la dernière détection."
+    - "Créer le capteur virtuel de confirmation."
+    - "Utiliser ce capteur dans Alarmo et tester le compromis de détection."
+  lien:
+    href: "#la-solution"
+    texte: "Voir le YAML et le template anonymisés"
+  note: "Les noms d’entités sont des exemples à remplacer. Ce filtre ignore un événement isolé : il peut aussi manquer une vibration réelle unique."
 ---
 
 ## Le problème
